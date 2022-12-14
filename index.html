@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js" defer ></script>
+
+</head>
+
+<body>
+
+<section id="events">
+    <h2>Events in Actions</h2>
+    <button v-once @click="add(5)">Add</button>
+    <button @click.right="reduce(10)">Remove</button>
+    <p v-once>Starter Counter: {{ counter }}</p>
+    <p >Result: {{ counter }}</p>
+    <input @input="setName" @keyup.enter="confirmInput" type="text">
+    <p>Your name: {{ confirmName }}</p>
+    <form @submit.prevent="submitForm">
+        <input type="text">
+        <button> Sign Up </button>
+    </form>
+</section>
+
+</body>
+</html>
